@@ -9,3 +9,5 @@ V
 &src/pt/ipp/SupplierAlg/TruckClass.java,2/8/2854924c1f0a5a52c401367ef5c07bdc8914797d
 b
 2src/pt/ipp/SupplierAlg/SupplierProcessStarter.java,6/9/69953949d50f22fffeccd8c12eb2f47e865a35da
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d

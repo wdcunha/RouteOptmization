@@ -66,9 +66,105 @@ class SupplierProcessStarter {
 
         dcDistance = dataSupplierClasses.get(0);
 
+    }
+
+    private static void dataFeed() {
+        dataSupplierClasses.add(new DataSupplierClass(1,8,286,95));
+        dataSupplierClasses.add(new DataSupplierClass(2,24,638,99));
+        dataSupplierClasses.add(new DataSupplierClass(3,43,41,114));
+        dataSupplierClasses.add(new DataSupplierClass(4,44,937,69));
+        dataSupplierClasses.add(new DataSupplierClass(5,49,973,44));
+        dataSupplierClasses.add(new DataSupplierClass(6,68,541,116));
+        dataSupplierClasses.add(new DataSupplierClass(7,192,450,72));
+        dataSupplierClasses.add(new DataSupplierClass(8,220,166,67));
+        dataSupplierClasses.add(new DataSupplierClass(9,260,860,102));
+        dataSupplierClasses.add(new DataSupplierClass(10,271,450,71));
+        dataSupplierClasses.add(new DataSupplierClass(11,313,215,61));
+        dataSupplierClasses.add(new DataSupplierClass(12,328,797,100));
+        dataSupplierClasses.add(new DataSupplierClass(13,336,665,28));
+        dataSupplierClasses.add(new DataSupplierClass(14,403,278,37));
+        dataSupplierClasses.add(new DataSupplierClass(15,436,655,106));
+        dataSupplierClasses.add(new DataSupplierClass(16,457,994,40));
+        dataSupplierClasses.add(new DataSupplierClass(17,476,581,43));
+        dataSupplierClasses.add(new DataSupplierClass(18,491,205,42));
+        dataSupplierClasses.add(new DataSupplierClass(19,510,189,113));
+        dataSupplierClasses.add(new DataSupplierClass(20,555,753,60));
+        dataSupplierClasses.add(new DataSupplierClass(21,574,786,74));
+        dataSupplierClasses.add(new DataSupplierClass(22,595,604,21));
+        dataSupplierClasses.add(new DataSupplierClass(23,631,205,99));
+        dataSupplierClasses.add(new DataSupplierClass(24,635,455,30));
+        dataSupplierClasses.add(new DataSupplierClass(25,643,139,90));
+        dataSupplierClasses.add(new DataSupplierClass(26,673,803,90));
+        dataSupplierClasses.add(new DataSupplierClass(27,706,838,116));
+        dataSupplierClasses.add(new DataSupplierClass(28,749,634,56));
+        dataSupplierClasses.add(new DataSupplierClass(29,750,265,46));
+        dataSupplierClasses.add(new DataSupplierClass(30,759,147,90));
+        dataSupplierClasses.add(new DataSupplierClass(31,767,750,107));
+        dataSupplierClasses.add(new DataSupplierClass(32,821,422,105));
+        dataSupplierClasses.add(new DataSupplierClass(33,876,514,87));
+        dataSupplierClasses.add(new DataSupplierClass(34,880,198,41));
+        dataSupplierClasses.add(new DataSupplierClass(35,887,670,43));
+        dataSupplierClasses.add(new DataSupplierClass(36,919,336,84));
+        dataSupplierClasses.add(new DataSupplierClass(37,928,310,41));
+        dataSupplierClasses.add(new DataSupplierClass(38,972,423,112));
+        dataSupplierClasses.add(new DataSupplierClass(39,976,373,91));
+        dataSupplierClasses.add(new DataSupplierClass(40,987,667,26));
+
+        orderingList(dataSupplierClasses);
 
     }
 
+    private static void orderingList(ArrayList listName){
+        // order ascendently the list by distance field
+        Collections.sort (listName, new Comparator() {
+            public int compare(Object o1, Object o2) {
+                DataSupplierClass p1 = (DataSupplierClass) o1;
+                DataSupplierClass p2 = (DataSupplierClass) o2;
+                return p1.getDistance() < p2.getDistance() ? -1 : (p1.getDistance() > p2.getDistance() ? +1 : 0);
+            }
+        });
+    }
+
+
+    public static int calcDistance(int p1x, int p1y, int p2x, int p2y) {
+
+//        return (Math.abs(p1x - p2x) + Math.abs(p1y - p2y));
+        return (int) Math.sqrt(Math.pow((p1x - p2x),2) + Math.pow((p1y - p2y),2));
+    }
+
+    private static TruckClass checkFreeTruck(){
+
+        truck = truckList.stream()
+                .filter(v -> v.getCapDisp() > 0)
+                .findFirst()
+                .orElse(null);
+//        System.out.println("checkFreeTruck: "+truck.getTruckId());
+        return truck;
+    }
+
+    private static void calcTruckDemand(){
+
+        int totalTrucks = (int) Math.ceil(totalProd / 200.0);
+        System.out.println("totalTrucks: "+totalTrucks);
+
+        int capacidadeRest = totalProd;
+
+        for (int i = 0; i < totalTrucks; i++) {
+            truckList.add(new TruckClass());
+        }
+
+        for (TruckClass trck : truckList) {
+
+            if (capacidadeRest < 200){
+                trck.setCapDisp(capacidadeRest);
+//                System.out.println("calcTruckDemand: "+trck.getTruckId()+"," + trck.getCapDisp()+"," + trck.getcapacidadeTotal()+"," + trck.getTruckCost());
+                continue;
+            }
+            capacidadeRest -= 200;
+
+//            System.out.println("calcTruckDemand: "+trck.getTruckId()+"," + trck.getCapDisp()+"," + trck.getcapacidadeTotal()+"," + trck.getTruckCost());
+        }
+    }
 
     public static void cenario1NextDcDistance(){
 
@@ -133,7 +229,7 @@ class SupplierProcessStarter {
 
         }
         System.out.println("* ---------------- * ---------------- *");
-        System.out.println(">> qtd total transp:  "+qtdTransportada);
+        System.out.println("| >> qtd total transp:  "+qtdTransportada);
         calcListOrders("Distância do DC");
 
     }
@@ -211,6 +307,51 @@ class SupplierProcessStarter {
 
     }
 
+
+    static DataSupplierClass nextDistance(){
+
+        return dataSupplierClasses.stream().filter(v -> v.getProd() > 0).findFirst().orElse(null);
+    }
+
+
+    static DataSupplierClass nextNeighbor(int px, int py){
+
+        DataSupplierClass dt = new DataSupplierClass();
+
+        dataCalcDistPoint = new ArrayList<>();
+
+        for (int i = 0; i < dataSupplierClasses.size(); i++) {
+            dt = new DataSupplierClass(dataSupplierClasses.get(i));
+//            System.out.println("dt:  "+dt.getId()+"," + dt.getOrigX()+"," + dt.getOrigY()+"," + dt.getProd()+"," + dt.getDistance());
+
+            dataCalcDistPoint.add(dt);
+            dataCalcDistPoint.get(i).setDistance(calcDistance(px,py,dt.getX(),dt.getY()));
+
+        }
+        orderingList(dataCalcDistPoint);
+
+        return dataCalcDistPoint.stream().filter(v -> v.getProd() > 0).findFirst().orElse(null);
+    }
+
+
+    static void calcListOrders(String nomeCenario){
+
+        for (OrderClass order : orderList) {
+            totalCost += order.getTotalCost();
+            totalDist += order.getTotalPercorrido();
+        }
+
+        System.out.println("| > > Total Percorrido: " + totalDist);
+        System.out.println("| > > Custo Total: " + totalCost);
+
+        finalOrderRes = new OrderClass();
+        finalOrderRes.setTotalPercorrido(totalDist);
+        finalOrderRes.setTotalCost(totalCost);
+        finalOrderRes.setNomeCenario(nomeCenario);
+        allOrdersList.add(finalOrderRes);
+
+    }
+
     public static void melhorRota() {
 
         int melhorTrajeto = allOrdersList.get(0).getTotalPercorrido();
@@ -240,80 +381,6 @@ class SupplierProcessStarter {
         System.out.println("* Custo total: "+bestOrder.getTotalCost());
 
         System.out.println("* ---------------- * ---------------- *");
-
-    }
-
-    public static int calcDistance(int p1x, int p1y, int p2x, int p2y) {
-
-//        return (Math.abs(p1x - p2x) + Math.abs(p1y - p2y));
-        return (int) Math.sqrt(Math.pow((p1x - p2x),2) + Math.pow((p1y - p2y),2));
-    }
-
-
-    static DataSupplierClass nextDistance(){
-
-        return dataSupplierClasses.stream().filter(v -> v.getProd() > 0).findFirst().orElse(null);
-    }
-
-
-    static DataSupplierClass nextNeighbor(int px, int py){
-
-        DataSupplierClass dt = new DataSupplierClass();
-
-        dataCalcDistPoint = new ArrayList<>();
-
-        for (int i = 0; i < dataSupplierClasses.size(); i++) {
-            dt = new DataSupplierClass(dataSupplierClasses.get(i));
-//            System.out.println("dt:  "+dt.getId()+"," + dt.getOrigX()+"," + dt.getOrigY()+"," + dt.getProd()+"," + dt.getDistance());
-
-            dataCalcDistPoint.add(dt);
-            dataCalcDistPoint.get(i).setDistance(calcDistance(px,py,dt.getX(),dt.getY()));
-
-        }
-        orderingList(dataCalcDistPoint);
-
-        return dataCalcDistPoint.stream().filter(v -> v.getProd() > 0).findFirst().orElse(null);
-    }
-
-
-    static void listRouts(){
-
-        for (RouteSupplierClass route : routes) {
-
-            System.out.println("RoutesList: "+route.getTruckId()+"," +route.getOrigX()+"," + route.getOrigY()+"," + route.getDestX()+"," + route.getDestY()+"," + route.getDist()+"," + route.getTruckCost());
-        }
-    }
-
-    static void listOrders(){
-
-        System.out.println("orderList: origX, origY, destX, destY, dist");
-
-        for (OrderClass order : orderList) {
-
-            for (int i = 0; i < order.getRoutes().size(); i++) {
-
-                System.out.println("orderList: " + order.getRoutes().get(i).getTruckId() + ", " + order.getRoutes().get(i).getOrigX() + ", "
-                        + order.getRoutes().get(i).getOrigY() + ", " + order.getRoutes().get(i).getDestX() + ", " + order.getRoutes().get(i).getDestY() + ", "
-                        + order.getRoutes().get(i).getDist() + ", " + order.getRoutes().get(i).getTruckCost());
-            }
-        }
-    }
-
-    static void calcListOrders(String nomeCenario){
-
-        for (OrderClass order : orderList) {
-            totalCost += order.getTotalCost();
-            totalDist += order.getTotalPercorrido();
-        }
-
-        System.out.println("| > > Total Percorrido: " + totalDist);
-        System.out.println("| > > Custo Total: " + totalCost);
-
-        finalOrderRes = new OrderClass();
-        finalOrderRes.setTotalPercorrido(totalDist);
-        finalOrderRes.setTotalCost(totalCost);
-        finalOrderRes.setNomeCenario(nomeCenario);
-        allOrdersList.add(finalOrderRes);
 
     }
 
@@ -366,108 +433,36 @@ class SupplierProcessStarter {
         }
     }
 
-    private static TruckClass checkFreeTruck(){
+    static void listRouts(){
 
-//        for (TruckClass tck : truckList) {
-//            System.out.println("Truck list: "+tck.getTruckId()+", "+tck.getcapacidadeTotal()+", "+tck.getTruckCost());
-//            System.out.println("Truck list: "+tck.getTruckId()+"," + tck.getCapDisp()+"," + tck.getcapacidadeTotal()+"," + tck.getTruckCost());
+        for (RouteSupplierClass route : routes) {
 
-//        }
-
-        truck = truckList.stream()
-                .filter(v -> v.getCapDisp() > 0)
-                .findFirst()
-                .orElse(null);
-//        System.out.println("checkFreeTruck: "+truck.getTruckId());
-        return truck;
-    }
-
-    private static void calcTruckDemand(){
-
-        int totalTrucks = (int) Math.ceil(totalProd / 200.0);
-        System.out.println("totalTrucks: "+totalTrucks);
-
-        int capacidadeRest = totalProd;
-
-        for (int i = 0; i < totalTrucks; i++) {
-            truckList.add(new TruckClass());
-        }
-
-        for (TruckClass trck : truckList) {
-
-            if (capacidadeRest < 200){
-                trck.setCapDisp(capacidadeRest);
-//                System.out.println("calcTruckDemand: "+trck.getTruckId()+"," + trck.getCapDisp()+"," + trck.getcapacidadeTotal()+"," + trck.getTruckCost());
-                continue;
-            }
-            capacidadeRest -= 200;
-
-//            System.out.println("calcTruckDemand: "+trck.getTruckId()+"," + trck.getCapDisp()+"," + trck.getcapacidadeTotal()+"," + trck.getTruckCost());
+            System.out.println("RoutesList: "+route.getTruckId()+"," +route.getOrigX()+"," + route.getOrigY()+"," + route.getDestX()+"," + route.getDestY()+"," + route.getDist()+"," + route.getTruckCost());
         }
     }
 
-    private static void orderingList(ArrayList listName){
-        // order ascendently the list by distance field
-        Collections.sort (listName, new Comparator() {
-            public int compare(Object o1, Object o2) {
-                DataSupplierClass p1 = (DataSupplierClass) o1;
-                DataSupplierClass p2 = (DataSupplierClass) o2;
-                return p1.getDistance() < p2.getDistance() ? -1 : (p1.getDistance() > p2.getDistance() ? +1 : 0);
+    static void calcTotalProd(){
+
+        for (DataSupplierClass total : dataSupplierClasses) {
+            totalProd += total.getProd();
+        }
+        System.out.println("Total Prod: "+totalProd);
+    }
+
+    static void listOrders(){
+
+        System.out.println("orderList: origX, origY, destX, destY, dist");
+
+        for (OrderClass order : orderList) {
+
+            for (int i = 0; i < order.getRoutes().size(); i++) {
+
+                System.out.println("orderList: " + order.getRoutes().get(i).getTruckId() + ", " + order.getRoutes().get(i).getOrigX() + ", "
+                        + order.getRoutes().get(i).getOrigY() + ", " + order.getRoutes().get(i).getDestX() + ", " + order.getRoutes().get(i).getDestY() + ", "
+                        + order.getRoutes().get(i).getDist() + ", " + order.getRoutes().get(i).getTruckCost());
             }
-        });
+        }
     }
-
-    private static void dataFeed() {
-        dataSupplierClasses.add(new DataSupplierClass(1,8,286,95));
-        dataSupplierClasses.add(new DataSupplierClass(2,24,638,99));
-        dataSupplierClasses.add(new DataSupplierClass(3,43,41,114));
-        dataSupplierClasses.add(new DataSupplierClass(4,44,937,69));
-        dataSupplierClasses.add(new DataSupplierClass(5,49,973,44));
-        dataSupplierClasses.add(new DataSupplierClass(6,68,541,116));
-        dataSupplierClasses.add(new DataSupplierClass(7,192,450,72));
-        dataSupplierClasses.add(new DataSupplierClass(8,220,166,67));
-        dataSupplierClasses.add(new DataSupplierClass(9,260,860,102));
-        dataSupplierClasses.add(new DataSupplierClass(10,271,450,71));
-        dataSupplierClasses.add(new DataSupplierClass(11,313,215,61));
-        dataSupplierClasses.add(new DataSupplierClass(12,328,797,100));
-        dataSupplierClasses.add(new DataSupplierClass(13,336,665,28));
-        dataSupplierClasses.add(new DataSupplierClass(14,403,278,37));
-        dataSupplierClasses.add(new DataSupplierClass(15,436,655,106));
-        dataSupplierClasses.add(new DataSupplierClass(16,457,994,40));
-        dataSupplierClasses.add(new DataSupplierClass(17,476,581,43));
-        dataSupplierClasses.add(new DataSupplierClass(18,491,205,42));
-        dataSupplierClasses.add(new DataSupplierClass(19,510,189,113));
-        dataSupplierClasses.add(new DataSupplierClass(20,555,753,60));
-        dataSupplierClasses.add(new DataSupplierClass(21,574,786,74));
-        dataSupplierClasses.add(new DataSupplierClass(22,595,604,21));
-        dataSupplierClasses.add(new DataSupplierClass(23,631,205,99));
-        dataSupplierClasses.add(new DataSupplierClass(24,635,455,30));
-        dataSupplierClasses.add(new DataSupplierClass(25,643,139,90));
-        dataSupplierClasses.add(new DataSupplierClass(26,673,803,90));
-        dataSupplierClasses.add(new DataSupplierClass(27,706,838,116));
-        dataSupplierClasses.add(new DataSupplierClass(28,749,634,56));
-        dataSupplierClasses.add(new DataSupplierClass(29,750,265,46));
-        dataSupplierClasses.add(new DataSupplierClass(30,759,147,90));
-        dataSupplierClasses.add(new DataSupplierClass(31,767,750,107));
-        dataSupplierClasses.add(new DataSupplierClass(32,821,422,105));
-        dataSupplierClasses.add(new DataSupplierClass(33,876,514,87));
-        dataSupplierClasses.add(new DataSupplierClass(34,880,198,41));
-        dataSupplierClasses.add(new DataSupplierClass(35,887,670,43));
-        dataSupplierClasses.add(new DataSupplierClass(36,919,336,84));
-        dataSupplierClasses.add(new DataSupplierClass(37,928,310,41));
-        dataSupplierClasses.add(new DataSupplierClass(38,972,423,112));
-        dataSupplierClasses.add(new DataSupplierClass(39,976,373,91));
-        dataSupplierClasses.add(new DataSupplierClass(40,987,667,26));
-
-        orderingList(dataSupplierClasses);
-
-
-//        for (DataSupplierClass total : dataSupplierClasses) {
-//            totalProd += total.getProd();
-//        }
-//        System.out.println("Total Prod: "+totalProd);
-    }
-
 
 
 }

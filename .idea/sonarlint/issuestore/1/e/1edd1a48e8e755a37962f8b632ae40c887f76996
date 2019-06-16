@@ -1,4 +1,7 @@
 
-psquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(šÎ‡
-Bsquid:S1170"!Make this final field static too.(Ÿë£­ıÿÿÿÿ8Öå®ë±-
-Bsquid:S1170"!Make this final field static too.(¸ §ıÿÿÿÿ8Öå®ë±-
+Dsquid:S1170
+"!Make this final field static too.(¸ §ıÿÿÿÿ8Öå®ë±-
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(šÎ‡
+Dsquid:S1170	"!Make this final field static too.(Ÿë£­ıÿÿÿÿ8Öå®ë±-
+Tsquid:S2440"6Remove this instantiation of "SupplierProcessStarter".(¡ï“8²ÍØ•µ-
+Xsquid:S2209"5Change this instance-reference to a static reference.(™Ó¨üÿÿÿÿ8²ÍØ•µ-

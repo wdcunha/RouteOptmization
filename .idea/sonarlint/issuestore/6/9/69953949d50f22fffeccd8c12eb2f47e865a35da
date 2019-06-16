@@ -1,40 +1,110 @@
 
+V
+squid:S106¯"9Replace this use of System.out or System.err by a logger.(œé¢,8îòêµ-
+jsquid:CommentedOutCodeLineÅ"<This block of commented-out lines of code should be removed.(‚ÖÀ„8À§éµ-
 W
-squid:S106È"9Replace this use of System.out or System.err by a logger.(³°Öà8Ø±ò½´-
-nsquid:CommentedOutCodeLineR"<This block of commented-out lines of code should be removed.(ë®ÈÜÿÿÿÿÿ8Ø±ò½´-
-hsquid:S2259?"JA "NullPointerException" could be thrown; "nextNeighbor" is nullable here.(¡¾¦Œ8Ø±ò½´-
-isquid:CommentedOutCodeLiner"<This block of commented-out lines of code should be removed.(Ñ¼óğ8Ø±ò½´-
-“squid:S1845V"pRename method "nextNeighbor" to prevent any misunderstanding/clash with field "nextNeighbor" defined on line 19.(¹Û­Åşÿÿÿÿ8Ø±ò½´-
-msquid:S22594"JA "NullPointerException" could be thrown; "nextNeighbor" is nullable here.(Ô³èãşÿÿÿÿ8Ø±ò½´-
-[
-squid:S106%"9Replace this use of System.out or System.err by a logger.(êÈåùÿÿÿÿÿ8Ø±ò½´-
-[
-squid:S1064"9Replace this use of System.out or System.err by a logger.(Ô³èãşÿÿÿÿ8Ø±ò½´-
-Ysquid:UselessImportCheck".Remove this unused import 'java.util.Objects'.(¼¸õ›8œá¿¾´-
+squid:S106è"9Replace this use of System.out or System.err by a logger.(üí›8À§éµ-
 V
-squid:S106z"9Replace this use of System.out or System.err by a logger.(ÅÖ¬8Ø±ò½´-
-asquid:S2259L"CA "NullPointerException" could be thrown; "truck" is nullable here.(Æ¨Ÿ8¶æ´¾´-
-V
-squid:S106?"9Replace this use of System.out or System.err by a logger.(¡¾¦Œ8Ø±ò½´-
-Lsquid:S1481p")Remove this unused "data" local variable.(¿€ÃŸüÿÿÿÿ8Ø±ò½´-
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ççõ¶ùÿÿÿÿ8Ø±ò½´-
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ıÿÈ²ıÿÿÿÿ8Ø±ò½´-
-isquid:CommentedOutCodeLinef"<This block of commented-out lines of code should be removed.(›ôÿŞ8Ø±ò½´-
-jsquid:CommentedOutCodeLineˆ"<This block of commented-out lines of code should be removed.(Á“î°8Ø±ò½´-
-hsquid:S3358“"DExtract this nested ternary operation into an independent statement.(–Ùåˆıÿÿÿÿ8Ø±ò½´-
+squid:S106×"9Replace this use of System.out or System.err by a logger.(²Â­18À§éµ-
+\
+squid:S106ç"9Replace this use of System.out or System.err by a logger.(ıûÅ±şÿÿÿÿ8À§éµ-
+W
+squid:S106ú"9Replace this use of System.out or System.err by a logger.(ÙÜßú8À§éµ-
+vsquid:S3776©"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(ĞõŠ®ûÿÿÿÿ8À§éµ-
+W
+squid:S106²"9Replace this use of System.out or System.err by a logger.(ÙÜßú8À§éµ-
+W
+squid:S106”"9Replace this use of System.out or System.err by a logger.(ÅÖ¬8éó¤ƒ¶-
+\
+squid:S106Ì"9Replace this use of System.out or System.err by a logger.(ùÅ¡Çøÿÿÿÿ8îòêµ-
+\
+squid:S106¤"9Replace this use of System.out or System.err by a logger.(Ú–İ¤øÿÿÿÿ8š‰ğêµ-
+asquid:S2259¯"CA "NullPointerException" could be thrown; "truck" is nullable here.(Ûñ©z8À§éµ-
+jsquid:CommentedOutCodeLine¥"<This block of commented-out lines of code should be removed.(ÆĞ·ì8éó¤ƒ¶-
+osquid:S1192²"PDefine a constant instead of duplicating this literal ", Capac. disp: " 6 times.(ÙÜßú8À§éµ-
+Œsquid:S1192ç"hDefine a constant instead of duplicating this literal "* ---------------- * ---------------- *" 5 times.(ıûÅ±şÿÿÿÿ8÷ù±êµ-
 ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(šÎ‡8Ø±ò½´-
-Usquid:S1854X"7Remove this useless assignment to local variable "dtp".(‹ñçğ8Ø±ò½´-
-psquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(Çµí‘8Ø±ò½´-
-Lsquid:S1604"(Make this anonymous inner class a lambda(ŠİÈÄúÿÿÿÿ8Ø±ò½´-
-?squid:S1659X"!Declare "dtp" on a separate line.(‹ñçğ8Ø±ò½´-
-isquid:CommentedOutCodeLine\"<This block of commented-out lines of code should be removed.(õ‡äÓ8Ø±ò½´-
-isquid:CommentedOutCodeLinea"<This block of commented-out lines of code should be removed.(ÅÎ¾€8Ø±ò½´-
-Fsquid:S1481X"(Remove this unused "dtp" local variable.(‹ñçğ8Ø±ò½´-
+osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(í¡·ôÿÿÿÿÿ8éó¤ƒ¶-
+W
+squid:S106ì"9Replace this use of System.out or System.err by a logger.(ËŞ‰¥8£»Âêµ-
+W
+squid:S106À"9Replace this use of System.out or System.err by a logger.(í™ñ„8À§éµ-
+squid:S1450"\Remove the "finalOrderRes" field and declare it as a local variable in the relevant methods.(ëµ³úÿÿÿÿ8Úñúéµ-
+\
+squid:S106°"9Replace this use of System.out or System.err by a logger.(ıûÅ±şÿÿÿÿ8À§éµ-
+\
+squid:S106¦"9Replace this use of System.out or System.err by a logger.(µØ¯óıÿÿÿÿ8îòêµ-
+\
+squid:S106Ö"9Replace this use of System.out or System.err by a logger.(½îˆûÿÿÿÿ8À§éµ-
+\
+squid:S106 "9Replace this use of System.out or System.err by a logger.(¬Û˜ßúÿÿÿÿ8”…Õêµ-
 V
-squid:S106L"9Replace this use of System.out or System.err by a logger.(Æ¨Ÿ8Ø±ò½´-
-Xsquid:S2209)"5Change this instance-reference to a static reference.(€œ¤®ùÿÿÿÿ8ÿÿÍÁ´-
-Rsquid:S2209+"5Change this instance-reference to a static reference.(—°Ê8ÿÿÍÁ´-
-Ssquid:S2209."5Change this instance-reference to a static reference.(‡îÄğ8ÿÿÍÁ´-
-Ssquid:S22096"5Change this instance-reference to a static reference.(Šíû¾8ÿÿÍÁ´-
-Xsquid:S22097"5Change this instance-reference to a static reference.(¿«šîùÿÿÿÿ8ÿÿÍÁ´-
-Xsquid:S2209I"5Change this instance-reference to a static reference.(€‡Âùÿÿÿÿ8ÿÿÍÁ´-
+squid:S106"9Replace this use of System.out or System.err by a logger.(§ß½8£»Âêµ-
+Qsquid:S1481–"-Remove this unused "posAtual" local variable.(İÛÄııÿÿÿÿ8À§éµ-
+W
+squid:S106Á"9Replace this use of System.out or System.err by a logger.(³°Öà8‚¹°ƒ¶-
+bsquid:S2259÷"CA "NullPointerException" could be thrown; "truck" is nullable here.(é‡˜§8À§éµ-
+\
+squid:S106¸"9Replace this use of System.out or System.err by a logger.(÷†íüÿÿÿÿ8îòêµ-
+\
+squid:S106±"9Replace this use of System.out or System.err by a logger.(ƒÀ”‚øÿÿÿÿ8À§éµ-
+lsquid:S2259Ê"HA "NullPointerException" could be thrown; "dcDistance" is nullable here.(ˆ¦åìúÿÿÿÿ8À§éµ-
+\
+squid:S106Æ"9Replace this use of System.out or System.err by a logger.(´®ãœøÿÿÿÿ8îòêµ-
+vsquid:S3776í"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(î·éûÿÿÿÿ8À§éµ-
+W
+squid:S106Ù"9Replace this use of System.out or System.err by a logger.(¢³¾8éó¤ƒ¶-
+osquid:CommentedOutCodeLine¨"<This block of commented-out lines of code should be removed.(É¼èúÿÿÿÿ8À§éµ-
+\
+squid:S106Ø"9Replace this use of System.out or System.err by a logger.(–¬…©ûÿÿÿÿ8éó¤ƒ¶-
+osquid:CommentedOutCodeLineÅ"<This block of commented-out lines of code should be removed.(ÙÚêùÿÿÿÿ8îòêµ-
+:squid:S3626"Remove this redundant jump.(ÉŠ©ƒ8À§éµ-
+\
+squid:S106Ÿ"9Replace this use of System.out or System.err by a logger.(ô®Öüÿÿÿÿ8ç×¸êµ-
+jsquid:CommentedOutCodeLine "<This block of commented-out lines of code should be removed.(ÆĞ·ì8éó¤ƒ¶-
+W
+squid:S106±"9Replace this use of System.out or System.err by a logger.(óÕ¼Â8À§éµ-
+\
+squid:S106¢"9Replace this use of System.out or System.err by a logger.(ıûÅ±şÿÿÿÿ8üÅòêµ-
+Ksquid:S1604w"(Make this anonymous inner class a lambda(ŠİÈÄúÿÿÿÿ8îòêµ-
+`squid:S1854–"<Remove this useless assignment to local variable "posAtual".(İÛÄııÿÿÿÿ8À§éµ-
+W
+squid:S106ˆ"9Replace this use of System.out or System.err by a logger.(í™ñ„8À§éµ-
+jsquid:CommentedOutCodeLine°"<This block of commented-out lines of code should be removed.(—‹±Ô8îòêµ-
+gsquid:S3358{"DExtract this nested ternary operation into an independent statement.(–Ùåˆıÿÿÿÿ8îòêµ-
+\
+squid:S106‡"9Replace this use of System.out or System.err by a logger.(‰‰á²ûÿÿÿÿ8À§éµ-
+\
+squid:S106£"9Replace this use of System.out or System.err by a logger.(ÈÑ–‘úÿÿÿÿ8”…Õêµ-
+\
+squid:S106í"9Replace this use of System.out or System.err by a logger.(³ÇóÈÿÿÿÿÿ8îòêµ-
+\
+squid:S106¥"9Replace this use of System.out or System.err by a logger.(«øÚÕûÿÿÿÿ8š‰ğêµ-
+V
+squid:S106Ÿ"9Replace this use of System.out or System.err by a logger.(²Â­18À§éµ-
+osquid:CommentedOutCodeLineß"<This block of commented-out lines of code should be removed.(É¼èúÿÿÿÿ8À§éµ-
+:squid:S3626Æ"Remove this redundant jump.(ÉŠ©ƒ8À§éµ-
+nsquid:CommentedOutCodeLine#"<This block of commented-out lines of code should be removed.(ıÿÈ²ıÿÿÿÿ8Ş±Æãµ-
+jsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‚ÖÀ„8À§éµ-
+Zsquid:S1854¿"6Remove this useless assignment to local variable "dt".(û‰£Ìøÿÿÿÿ8îòêµ-
+osquid:CommentedOutCodeLineƒ"<This block of commented-out lines of code should be removed.(ë®ÈÜÿÿÿÿÿ8îòêµ-
+\
+squid:S106¨"9Replace this use of System.out or System.err by a logger.(ıûÅ±şÿÿÿÿ8îòêµ-
+Lsquid:S1481Î"-Remove this unused "posAtual" local variable.(¸¹ÿ8À§éµ-
+isquid:S2259’"JA "NullPointerException" could be thrown; "nextNeighbor" is nullable here.( ÈèĞ8À§éµ-
+\
+squid:S106”"9Replace this use of System.out or System.err by a logger.(ıûÅ±şÿÿÿÿ8À§éµ-
+W
+squid:S106ù"9Replace this use of System.out or System.err by a logger.(‘ÎÊ×8À§éµ-
+[squid:S1854Î"<Remove this useless assignment to local variable "posAtual".(¸¹ÿ8À§éµ-
+W
+squid:S106•"9Replace this use of System.out or System.err by a logger.(ÔëıÃ8şôòêµ-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÎÉàv8¶…·êµ-
+\
+squid:S106¿"9Replace this use of System.out or System.err by a logger.(‘‡éûÿÿÿÿ8À§éµ-
+jsquid:CommentedOutCodeLineú"<This block of commented-out lines of code should be removed.(—‹±Ô8îòêµ-
+\
+squid:S106"9Replace this use of System.out or System.err by a logger.(Íû‰Åşÿÿÿÿ8À§éµ-
+V
+squid:S106&"9Replace this use of System.out or System.err by a logger.(ÚÖ”ì8âº˜çµ-
