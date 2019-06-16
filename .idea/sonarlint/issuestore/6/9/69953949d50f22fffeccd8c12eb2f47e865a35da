@@ -1,0 +1,40 @@
+
+W
+squid:S106»"9Replace this use of System.out or System.err by a logger.(≥∞÷‡8ÿ±ÚΩ¥-
+nsquid:CommentedOutCodeLineR"<This block of commented-out lines of code should be removed.(ÎÆ»‹ˇˇˇˇˇ8ÿ±ÚΩ¥-
+hsquid:S2259?"JA "NullPointerException" could be thrown; "nextNeighbor" is nullable here.(°æ¶å8ÿ±ÚΩ¥-
+isquid:CommentedOutCodeLiner"<This block of commented-out lines of code should be removed.(—ºÛ8ÿ±ÚΩ¥-
+ìsquid:S1845V"pRename method "nextNeighbor" to prevent any misunderstanding/clash with field "nextNeighbor" defined on line 19.(π€≠≈˛ˇˇˇˇ8ÿ±ÚΩ¥-
+msquid:S22594"JA "NullPointerException" could be thrown; "nextNeighbor" is nullable here.(‘≥Ë„˛ˇˇˇˇ8ÿ±ÚΩ¥-
+[
+squid:S106%"9Replace this use of System.out or System.err by a logger.(Í»Â˘ˇˇˇˇˇ8ÿ±ÚΩ¥-
+[
+squid:S1064"9Replace this use of System.out or System.err by a logger.(‘≥Ë„˛ˇˇˇˇ8ÿ±ÚΩ¥-
+Ysquid:UselessImportCheck".Remove this unused import 'java.util.Objects'.(º∏ıõ8ú·øæ¥-
+V
+squid:S106z"9Replace this use of System.out or System.err by a logger.(≈÷¨ç8ÿ±ÚΩ¥-
+asquid:S2259L"CA "NullPointerException" could be thrown; "truck" is nullable here.(∆®çü8∂Ê¥æ¥-
+V
+squid:S106?"9Replace this use of System.out or System.err by a logger.(°æ¶å8ÿ±ÚΩ¥-
+Lsquid:S1481p")Remove this unused "data" local variable.(øÄ√ü¸ˇˇˇˇ8ÿ±ÚΩ¥-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÁÁı∂˘ˇˇˇˇ8ÿ±ÚΩ¥-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(˝ˇ»≤˝ˇˇˇˇ8ÿ±ÚΩ¥-
+isquid:CommentedOutCodeLinef"<This block of commented-out lines of code should be removed.(õÙˇﬁ8ÿ±ÚΩ¥-
+jsquid:CommentedOutCodeLineà"<This block of commented-out lines of code should be removed.(¡ìÓ∞8ÿ±ÚΩ¥-
+hsquid:S3358ì"DExtract this nested ternary operation into an independent statement.(ñŸÂà˝ˇˇˇˇ8ÿ±ÚΩ¥-
+ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(öŒéá8ÿ±ÚΩ¥-
+Usquid:S1854X"7Remove this useless assignment to local variable "dtp".(ãÒÁ8ÿ±ÚΩ¥-
+psquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(«µÌë8ÿ±ÚΩ¥-
+Lsquid:S1604è"(Make this anonymous inner class a lambda(ä›»ƒ˙ˇˇˇˇ8ÿ±ÚΩ¥-
+?squid:S1659X"!Declare "dtp" on a separate line.(ãÒÁ8ÿ±ÚΩ¥-
+isquid:CommentedOutCodeLine\"<This block of commented-out lines of code should be removed.(ıá‰”8ÿ±ÚΩ¥-
+isquid:CommentedOutCodeLinea"<This block of commented-out lines of code should be removed.(≈ŒæÄ8ÿ±ÚΩ¥-
+Fsquid:S1481X"(Remove this unused "dtp" local variable.(ãÒÁ8ÿ±ÚΩ¥-
+V
+squid:S106L"9Replace this use of System.out or System.err by a logger.(∆®çü8ÿ±ÚΩ¥-
+Xsquid:S2209)"5Change this instance-reference to a static reference.(Äú§Æ˘ˇˇˇˇ8ˇˇÕ¡¥-
+Rsquid:S2209+"5Change this instance-reference to a static reference.(ó∞ 8ˇˇÕ¡¥-
+Ssquid:S2209."5Change this instance-reference to a static reference.(áÓƒ8ˇˇÕ¡¥-
+Ssquid:S22096"5Change this instance-reference to a static reference.(äÌ˚æ8ˇˇÕ¡¥-
+Xsquid:S22097"5Change this instance-reference to a static reference.(ø´öÓ˘ˇˇˇˇ8ˇˇÕ¡¥-
+Xsquid:S2209I"5Change this instance-reference to a static reference.(Äéá¬˘ˇˇˇˇ8ˇˇÕ¡¥-

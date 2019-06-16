@@ -1,0 +1,7 @@
+
+Isquid:S1068"-Remove this unused "totalCost" private field.(ÌÙ‡‰8»ØÜ‘²-
+Isquid:S1068"(Remove this unused "cost" private field.(™‰ıêùÿÿÿÿ8¾ìÖ‘²-
+‘squid:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ƒÅ¼Çùÿÿÿÿ8ÇÆç‘²-
+’squid:S1319"qThe type of the "routes" object should be an interface such as "List" rather than the implementation "ArrayList".(îòÚ‡ıÿÿÿÿ8ÇÆç‘²-
+psquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(šÎ‡
+squid:S1319"qThe type of the "routes" object should be an interface such as "List" rather than the implementation "ArrayList".(Ãİ“„8£Ëæ‘²-
